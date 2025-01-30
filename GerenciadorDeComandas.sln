@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciadorDeComandas", "GerenciadorDeComandas.csproj", "{9F95CD16-25C1-4F7A-A6DF-F8CEEDA8BFCF}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "instalador_gerenciadorComandas", "instalador\instalador_gerenciadorComandas\instalador_gerenciadorComandas.vdproj", "{BD0F66BC-9772-4821-A825-7C16FD420BB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F95CD16-25C1-4F7A-A6DF-F8CEEDA8BFCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F95CD16-25C1-4F7A-A6DF-F8CEEDA8BFCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F95CD16-25C1-4F7A-A6DF-F8CEEDA8BFCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F95CD16-25C1-4F7A-A6DF-F8CEEDA8BFCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD0F66BC-9772-4821-A825-7C16FD420BB3}.Debug|Any CPU.ActiveCfg = Debug
+		{BD0F66BC-9772-4821-A825-7C16FD420BB3}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {042FF5D5-5E95-4176-9713-05CBEBF84707}
+	EndGlobalSection
+EndGlobal
