@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\danil\\Desktop\\GerenciadorComandas\\GerenciadorDeComandas\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9F95CD16-25C1-4F7A-A6DF-F8CEEDA8BFCF}|GerenciadorDeComandas.csproj|c:\\users\\danil\\desktop\\gerenciadorcomandas\\gerenciadordecomandas\\forms\\frmcontrolecomandas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F95CD16-25C1-4F7A-A6DF-F8CEEDA8BFCF}|GerenciadorDeComandas.csproj|solutionrelative:forms\\frmcontrolecomandas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F95CD16-25C1-4F7A-A6DF-F8CEEDA8BFCF}|GerenciadorDeComandas.csproj|c:\\users\\danil\\desktop\\gerenciadorcomandas\\gerenciadordecomandas\\classes\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F95CD16-25C1-4F7A-A6DF-F8CEEDA8BFCF}|GerenciadorDeComandas.csproj|solutionrelative:classes\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F95CD16-25C1-4F7A-A6DF-F8CEEDA8BFCF}|GerenciadorDeComandas.csproj|c:\\users\\danil\\desktop\\gerenciadorcomandas\\gerenciadordecomandas\\banco\\conexaobanco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F95CD16-25C1-4F7A-A6DF-F8CEEDA8BFCF}|GerenciadorDeComandas.csproj|solutionrelative:banco\\conexaobanco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F95CD16-25C1-4F7A-A6DF-F8CEEDA8BFCF}|GerenciadorDeComandas.csproj|c:\\users\\danil\\desktop\\gerenciadorcomandas\\gerenciadordecomandas\\forms\\frmcomanda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F95CD16-25C1-4F7A-A6DF-F8CEEDA8BFCF}|GerenciadorDeComandas.csproj|solutionrelative:forms\\frmcomanda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F95CD16-25C1-4F7A-A6DF-F8CEEDA8BFCF}|GerenciadorDeComandas.csproj|c:\\users\\danil\\desktop\\gerenciadorcomandas\\gerenciadordecomandas\\forms\\frmcomanda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F95CD16-25C1-4F7A-A6DF-F8CEEDA8BFCF}|GerenciadorDeComandas.csproj|solutionrelative:forms\\frmcomanda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +43,70 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConexaoBanco.cs",
+              "DocumentMoniker": "C:\\Users\\danil\\Desktop\\GerenciadorComandas\\GerenciadorDeComandas\\Banco\\ConexaoBanco.cs",
+              "RelativeDocumentMoniker": "Banco\\ConexaoBanco.cs",
+              "ToolTip": "C:\\Users\\danil\\Desktop\\GerenciadorComandas\\GerenciadorDeComandas\\Banco\\ConexaoBanco.cs",
+              "RelativeToolTip": "Banco\\ConexaoBanco.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T01:39:54.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmComanda.cs",
+              "DocumentMoniker": "C:\\Users\\danil\\Desktop\\GerenciadorComandas\\GerenciadorDeComandas\\Forms\\FrmComanda.cs",
+              "RelativeDocumentMoniker": "Forms\\FrmComanda.cs",
+              "ToolTip": "C:\\Users\\danil\\Desktop\\GerenciadorComandas\\GerenciadorDeComandas\\Forms\\FrmComanda.cs",
+              "RelativeToolTip": "Forms\\FrmComanda.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAcwJoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T01:53:05.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmComanda.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\danil\\Desktop\\GerenciadorComandas\\GerenciadorDeComandas\\Forms\\FrmComanda.cs",
+              "RelativeDocumentMoniker": "Forms\\FrmComanda.cs",
+              "ToolTip": "C:\\Users\\danil\\Desktop\\GerenciadorComandas\\GerenciadorDeComandas\\Forms\\FrmComanda.cs [Design]",
+              "RelativeToolTip": "Forms\\FrmComanda.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T01:53:02.95Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\danil\\Desktop\\GerenciadorComandas\\GerenciadorDeComandas\\Classes\\Cliente.cs",
+              "RelativeDocumentMoniker": "Classes\\Cliente.cs",
+              "ToolTip": "C:\\Users\\danil\\Desktop\\GerenciadorComandas\\GerenciadorDeComandas\\Classes\\Cliente.cs",
+              "RelativeToolTip": "Classes\\Cliente.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwCkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T01:18:29.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmControleComandas.cs",
+              "DocumentMoniker": "C:\\Users\\danil\\Desktop\\GerenciadorComandas\\GerenciadorDeComandas\\Forms\\FrmControleComandas.cs",
+              "RelativeDocumentMoniker": "Forms\\FrmControleComandas.cs",
+              "ToolTip": "C:\\Users\\danil\\Desktop\\GerenciadorComandas\\GerenciadorDeComandas\\Forms\\FrmControleComandas.cs",
+              "RelativeToolTip": "Forms\\FrmControleComandas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJAAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T00:47:54.61Z",
+              "EditorCaption": ""
             }
           ]
         }

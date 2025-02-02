@@ -67,7 +67,6 @@ namespace GerenciadorDeComandas
             if(tabControlComandas.SelectedIndex == 0)
             {
                 CarregarClientesAtivos();
-
             }
 
             if(tabControlComandas.SelectedIndex == 2)
@@ -76,44 +75,32 @@ namespace GerenciadorDeComandas
                 CarregarClientesPorData(data);
 
                 ValorTotalFinal(data);
-            }
-
-            
+            }            
         }
 
         int paginaAtual = 0; 
-        int tamanhoPagina = 34; 
+        int tamanhoPagina = 32; 
 
 
         private void CarregarClientesAtivos()
         {
             panelComandasAbertas.Controls.Clear();
 
-            ConexaoBanco conexao = new ConexaoBanco();
-            string query = $@"
-                SELECT *
-                FROM clientes
-                ORDER BY Id ASC
-                LIMIT {tamanhoPagina} OFFSET {paginaAtual * tamanhoPagina};";
+            Cliente cliente = new Cliente();
 
-            DataTable dados = conexao.Select(query);
-            
+            DataTable dados = cliente.ClientesAtivos(tamanhoPagina, paginaAtual);
             
             foreach(DataRow comanda in dados.Rows)
             {
                 int Id = Convert.ToInt32(comanda["Id"].ToString());
                 string ativo = comanda["Ativo"].ToString();
-                if ( ativo != "0")
-                {
-                    string nome = comanda["Nome"].ToString();
-                    string data = comanda["Data"].ToString();
+                string nome = comanda["Nome"].ToString();
+                string data = comanda["Data"].ToString();
 
+                var userControlComanda = new UserControlComanda(Id, this);
+                userControlComanda.SetComanda(nome, data, ativo);
 
-                    var userControlComanda = new UserControlComanda(Id, this);
-                    userControlComanda.SetComanda(nome, data, ativo);
-
-                    panelComandasAbertas.Controls.Add(userControlComanda);
-                }
+                panelComandasAbertas.Controls.Add(userControlComanda);
 
             }
 
@@ -140,52 +127,24 @@ namespace GerenciadorDeComandas
         private void CarregarClientesPorData(string Data)
         {
             panelComandasFechadas.Controls.Clear();
+            
+            Cliente cliente = new Cliente();
 
-            ConexaoBanco conexao = new ConexaoBanco();
-
-            string query = $"SELECT * FROM clientes WHERE Data = '{Data}';";
-            DataTable dados = conexao.Select(query);
-
+            var dados = cliente.ClientesPorData(Data);
 
             foreach (DataRow comanda in dados.Rows)
             {
                 int Id = Convert.ToInt32(comanda["Id"].ToString());
                 string ativo = comanda["Ativo"].ToString();
-                if (ativo == "0")
-                {
-                    string nome = comanda["Nome"].ToString();
-                    string data = comanda["Data"].ToString();
+                
+                string nome = comanda["Nome"].ToString();
+                string data = comanda["Data"].ToString();
+                var userControlComanda = new UserControlComanda(Id, this);
+                userControlComanda.SetComanda(nome, data, ativo);
 
-
-                    var userControlComanda = new UserControlComanda(Id, this);
-                    userControlComanda.SetComanda(nome, data, ativo);
-
-                    panelComandasFechadas.Controls.Add(userControlComanda);
-                }
-
+                panelComandasFechadas.Controls.Add(userControlComanda);
             }
         }
-
-        private void ValorTotalFinal(string data)
-        {
-
-            ConexaoBanco conexao = new ConexaoBanco();
-
-            string query = $@"SELECT SUM(COALESCE(c.PrecoTotal, 0)) AS TotalGeral
-                        FROM comandas c
-                        JOIN clientes cl ON c.ClienteID = cl.Id
-                        WHERE cl.Ativo = 0   AND cl.Data = '{data}'";
-            DataTable dados = conexao.Select(query);
-            DataRow linhas = dados.Rows[0];
-
-            double totalGeral = linhas["TotalGeral"] != DBNull.Value? Convert.ToDouble(linhas["TotalGeral"]) : 0;
-
-
-            lblValorFinal.Text = totalGeral.ToString("C", new CultureInfo("pt-BR")); 
-
-
-        }
-
         private void dtpDatasComandas_ValueChanged(object sender, EventArgs e)
         {
             string data = dtpDatasComandas.Value.Date.ToString("yyyy-MM-dd");
@@ -193,5 +152,17 @@ namespace GerenciadorDeComandas
 
             ValorTotalFinal(data);
         }
+
+        private void ValorTotalFinal(string data)
+        {
+            Cliente cliente = new Cliente();
+            DataTable dados =  cliente.ValorTotalComanda(data);
+            DataRow linhas = dados.Rows[0];
+
+            double totalGeral = linhas["TotalGeral"] != DBNull.Value? Convert.ToDouble(linhas["TotalGeral"]) : 0;
+
+            lblValorFinal.Text = totalGeral.ToString("C", new CultureInfo("pt-BR")); 
+        }
+
     }
 }   

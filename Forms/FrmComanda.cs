@@ -139,9 +139,6 @@
                         if (row.IsNewRow)
                             continue;
 
-
-                        Debug.WriteLine($"Linha {i}, Quantidade: {row.Cells["Quantidade"].Value}");
-
                         if (row.Cells["Quantidade"].Value != null && int.TryParse(row.Cells["Quantidade"].Value.ToString(), out int quantidade))
                         {
                             int IdProduto = Convert.ToInt32(row.Cells["ProdutoID"].Value.ToString());
@@ -157,7 +154,6 @@
                         ConexaoBanco conexao = new ConexaoBanco();
                             conexao.ExecutarComando(query);
 
-                            Debug.WriteLine($"Linha {i}, Quantidade Válida: {quantidade}");
                         }
                     }
                 }

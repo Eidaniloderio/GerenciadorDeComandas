@@ -28,11 +28,9 @@ namespace GerenciadorDeComandas.Banco
             conexao.Open();
 
             comando = conexao.CreateCommand();
-
-            IniciarTabelas();
         }
 
-        private void IniciarTabelas()
+        public void IniciarTabelas()
         {
             string query = @"
             -- Tabela 'clientes'

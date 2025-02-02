@@ -1,6 +1,7 @@
 ﻿using GerenciadorDeComandas.Banco;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -30,6 +31,45 @@ namespace GerenciadorDeComandas
 
             return retorno;
 
+        }
+
+        public DataTable ClientesAtivos(int tamanhoPagina, int paginaAtual)
+        {
+            ConexaoBanco conexao = new ConexaoBanco();
+            string query = $@"
+                SELECT *
+                FROM clientes
+                WHERE Ativo = 1
+                ORDER BY Id ASC
+                LIMIT {tamanhoPagina} OFFSET {paginaAtual * tamanhoPagina};";
+
+            
+            DataTable dados = conexao.Select(query);
+
+            return dados;
+        }
+
+        public DataTable ClientesPorData(string data)
+        {
+            ConexaoBanco conexao = new ConexaoBanco();
+
+            string query = $"SELECT * FROM clientes WHERE Data = '{data}';";
+            DataTable dados = conexao.Select(query);
+
+            return dados;
+        }
+
+        public DataTable ValorTotalComanda(string data)
+        {
+            ConexaoBanco conexao = new ConexaoBanco();
+
+            string query = $@"SELECT SUM(COALESCE(c.PrecoTotal, 0)) AS TotalGeral
+                        FROM comandas c
+                        JOIN clientes cl ON c.ClienteID = cl.Id
+                        WHERE cl.Ativo = 0 AND cl.Data = '{data}'";
+            DataTable dados = conexao.Select(query);
+
+            return dados;
         }
     }
 

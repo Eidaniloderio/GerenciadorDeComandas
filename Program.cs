@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GerenciadorDeComandas.Banco;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,6 +17,10 @@ namespace GerenciadorDeComandas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            ConexaoBanco conexaoBanco = new ConexaoBanco();
+            conexaoBanco.IniciarTabelas();
+            
             Application.Run(new FrmPrincipal());
         }
     }
