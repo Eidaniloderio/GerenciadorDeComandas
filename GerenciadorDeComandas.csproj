@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="Banco\ConexaoBanco.cs" />
     <Compile Include="Classes\Cliente.cs" />
+    <Compile Include="Classes\Comanda.cs" />
     <Compile Include="Classes\Produtos.cs" />
     <Compile Include="Forms\FrmComanda.cs">
       <SubType>Form</SubType>

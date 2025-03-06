@@ -66,6 +66,7 @@ namespace GerenciadorDeComandas
             {
                 this.BackColor = Color.Aqua;
 
+
                 FrmComanda comanda = new FrmComanda(clienteId, Nome, Data)
                 {
                     Owner = controleComandas

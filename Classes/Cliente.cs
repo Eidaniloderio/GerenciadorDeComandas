@@ -1,4 +1,5 @@
 ﻿using GerenciadorDeComandas.Banco;
+using GerenciadorDeComandas.Classes;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -17,9 +18,12 @@ namespace GerenciadorDeComandas
         private DateTime date;
         private int ativo;
 
+        private List<Comanda> comandas;
+
         public string Nome { get => nome; set => nome = value; }
         public DateTime Date { get => date; set => date = value; }
         public int Ativo { get => ativo; set => ativo = value; }
+        public List<Comanda> Comandas { get => comandas; set => comandas = value; }
 
         public string CriarCliente()
         {
